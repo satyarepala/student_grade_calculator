@@ -7,8 +7,13 @@ setup(
     author_email='satyarepala3@gmail.com',
     description='Student Grade Calculator',
     long_description='A simple student grade calculator project using Python.',
-    url='https://github.com/yourusername/student_grade_calculator',
+    url='https://github.com/satyarepala/student_grade_calculator',
     packages=find_packages(),
+    entry_points={
+        'console_scripts': [
+            'student_grade_calculator=student_grade_calculator.main:main',
+        ],
+    },
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Education',
