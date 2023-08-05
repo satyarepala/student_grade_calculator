@@ -23,6 +23,25 @@ cd student_grade_calculator
 ```commandline
 python setup.py install
 ```
+## Install using wheel file
+
+1. Build the Wheel file using the following command:
+```markdown
+python setup.py sdist bdist_wheel
+```
+
+This command will create a dist directory containing the Wheel file.
+
+2. Installing a Wheel File:
+Open a command prompt or terminal.
+Navigate to the directory containing the Wheel file using the cd command:
+```markdown
+cd /path/to/your/directory
+```
+3. Install the Wheel file using pip in terminal:
+```markdown
+pip install student_grade_calculator-1.0.0-py3-none-any.whl
+```
 
 ## Usage
 To run the Student Grade Calculator, simply execute the following command in your terminal:
@@ -64,3 +83,4 @@ student_grade_calculator/
             student.py
 
 ```
+
