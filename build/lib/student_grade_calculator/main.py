@@ -60,10 +60,6 @@ def find_highest_lowest_average(students):
     return highest_student, highest_average, lowest_student, lowest_average
 
 
-def get_existing_students_names(students):
-    return [student.name for student in students]
-
-
 def main():
     print("Welcome to the Student Grade Calculator!\n")
 
@@ -82,18 +78,12 @@ def main():
 
         if choice == "1":
             name = input("Enter the student's name: ")
-
-            existing_students = get_existing_students_names(students)
-            if name in existing_students:
-                print("Student already exist in database:")
-            else:
-                math_grade = float(input(" Enter math grade: "))
-                sci_grade = float(input(" Enter science grade: "))
-                eng_grade = float(input(" Enter english grade: "))
-                student_obj = Student(name, [math_grade, sci_grade, eng_grade])
-                students.append(student_obj)
-                save_student_data(filename, students)
-                print(f"added {name} to the students.")
+            math_grade = float(input("Enter Mathematics Grade: "))
+            sci_grade = float(input("Enter Science Grade: "))
+            eng_grade = float(input("Enter English Grade: "))
+            new_student = Student(name, [math_grade, sci_grade, eng_grade])
+            students.append(new_student)
+            print(f"\nStudent '{name}' added successfully!")
 
         elif choice == "2":
             name = input("Enter the student's name to update grades: ")
